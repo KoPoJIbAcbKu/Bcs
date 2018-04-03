@@ -1,0 +1,362 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7413550E-5102-445B-94B0-87FBFCB3AAFA}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bcs_App</RootNamespace>
+    <AssemblyName>Bcs_App</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper, Version=1.50.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.50.4\lib\net451\Dapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Resources\css\components\chart\chart.css" />
+    <Content Include="Resources\css\components\chat\xchat.css" />
+    <Content Include="Resources\css\components\datepicker\bootstrap-datepicker3.min.css" />
+    <Content Include="Resources\css\components\dictionary\dictionary.css" />
+    <Content Include="Resources\css\components\fileinput\fileinput.min.css" />
+    <Content Include="Resources\css\components\graphic\infographic.css" />
+    <Content Include="Resources\css\components\modal\modal.css" />
+    <Content Include="Resources\css\components\multielement\multielement.css" />
+    <Content Include="Resources\css\components\radio\radio.css" />
+    <Content Include="Resources\css\components\scroll\horizontal.scroll.css" />
+    <Content Include="Resources\css\components\scroll\vertical.scroll.css" />
+    <Content Include="Resources\css\components\select\ajax-bootstrap-select.min.css" />
+    <Content Include="Resources\css\components\select\bootstrap-select.min.css" />
+    <Content Include="Resources\css\components\slider\slider.css" />
+    <Content Include="Resources\css\components\statusbar\statusbar.css" />
+    <Content Include="Resources\css\components\switch\switch.min.css" />
+    <Content Include="Resources\css\components\textbox\text.css" />
+    <Content Include="Resources\css\core\Animation.css" />
+    <Content Include="Resources\css\core\auth.css" />
+    <Content Include="Resources\css\core\bootstrap.min.css" />
+    <Content Include="Resources\css\core\colorictemplate.css" />
+    <Content Include="Resources\css\core\coloric\core.dark.css" />
+    <Content Include="Resources\css\core\core.css" />
+    <Content Include="Resources\css\core\font-awesome.css" />
+    <Content Include="Resources\css\core\font-play.css" />
+    <Content Include="Resources\css\core\form.css" />
+    <Content Include="Resources\css\core\menu.css" />
+    <Content Include="Resources\css\core\scroll.css" />
+    <Content Include="Resources\css\core\Site.css" />
+    <Content Include="Resources\css\core\space.css" />
+    <Content Include="Resources\css\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Resources\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Resources\image\1.png" />
+    <Content Include="Resources\image\13.jpg" />
+    <Content Include="Resources\image\20.jpg" />
+    <Content Include="Resources\image\7.jpg" />
+    <Content Include="Resources\image\8.jpg" />
+    <Content Include="Resources\image\9.jpg" />
+    <Content Include="Resources\image\bg2.png" />
+    <Content Include="Resources\image\icon-fb.png" />
+    <Content Include="Resources\image\icon-tw.png" />
+    <Content Include="Resources\image\icon-vk.png" />
+    <Content Include="Resources\image\IMG_20171023_173122.jpg" />
+    <Content Include="Resources\image\planets.jpg" />
+    <Content Include="Resources\scripts\components\chart\Chart.bundle.min.js" />
+    <Content Include="Resources\scripts\components\chart\Chart.min.js" />
+    <Content Include="Resources\scripts\components\chart\chartist.min.js" />
+    <Content Include="Resources\scripts\components\chat\Chat.js" />
+    <Content Include="Resources\scripts\components\datepicker\bootstrap-datepicker.js" />
+    <Content Include="Resources\scripts\components\dictionary\dicitonary.js" />
+    <Content Include="Resources\scripts\components\dictionary\dictionary2.js" />
+    <Content Include="Resources\scripts\components\dynamic\dynamic.form.js" />
+    <Content Include="Resources\scripts\components\fias\fias.min — копия.js" />
+    <Content Include="Resources\scripts\components\fias\fias.min.js" />
+    <Content Include="Resources\scripts\components\fias\fias.view.js" />
+    <Content Include="Resources\scripts\components\fias\FiasCore.js" />
+    <Content Include="Resources\scripts\components\fias\FiasCore2.js" />
+    <Content Include="Resources\scripts\components\fileinput\fileinput.min.js" />
+    <Content Include="Resources\scripts\components\fileinput\fileinput_locale_ru.js" />
+    <Content Include="Resources\scripts\components\fileinput\input.file.js" />
+    <Content Include="Resources\scripts\components\filter\filter.js" />
+    <Content Include="Resources\scripts\components\form\block.form.js" />
+    <Content Include="Resources\scripts\components\form\left.side.form.js" />
+    <Content Include="Resources\scripts\components\graphic\graphic.js" />
+    <Content Include="Resources\scripts\components\loader\css.loader.js" />
+    <Content Include="Resources\scripts\components\menu\leftmenu.js" />
+    <Content Include="Resources\scripts\components\menu\menu.js" />
+    <Content Include="Resources\scripts\components\modal\modal.js" />
+    <Content Include="Resources\scripts\components\multielement\multielement.js" />
+    <Content Include="Resources\scripts\components\pagginator\pagginator.js" />
+    <Content Include="Resources\scripts\components\popover\poopover.js" />
+    <Content Include="Resources\scripts\components\radio\radio.js" />
+    <Content Include="Resources\scripts\components\scroll\jquery.nicescroll.min.js" />
+    <Content Include="Resources\scripts\components\scroll\scroll.js" />
+    <Content Include="Resources\scripts\components\select\ajax-bootstrap-select.js" />
+    <Content Include="Resources\scripts\components\select\ajax-bootstrap-select.min.js" />
+    <Content Include="Resources\scripts\components\select\bootstrap-select.js" />
+    <Content Include="Resources\scripts\components\select\bootstrap-select.min.js" />
+    <Content Include="Resources\scripts\components\slider\slider.js" />
+    <Content Include="Resources\scripts\components\statusbar\statusbar.js" />
+    <Content Include="Resources\scripts\components\switch\bootstrap-switch.min.js" />
+    <Content Include="Resources\scripts\components\table\filtering.js" />
+    <Content Include="Resources\scripts\components\table\table.js" />
+    <Content Include="Resources\scripts\components\table\table2.js" />
+    <Content Include="Resources\scripts\components\tooltip\bootstrap-tooltip.js" />
+    <Content Include="Resources\scripts\core\auth.js" />
+    <Content Include="Resources\scripts\core\bootstrap.min.js" />
+    <Content Include="Resources\scripts\core\core.js" />
+    <Content Include="Resources\scripts\core\geolocation.js" />
+    <Content Include="Resources\scripts\core\indicator.js" />
+    <Content Include="Resources\scripts\core\init.datepicker.js" />
+    <Content Include="Resources\scripts\core\jquery-2.1.4.min.js" />
+    <Content Include="Resources\scripts\core\jquery.event.swipe.js" />
+    <Content Include="Resources\scripts\core\jquery.maskedinput.js" />
+    <Content Include="Resources\scripts\core\jquery.mobile-1.4.5.min.js" />
+    <Content Include="Resources\scripts\core\mask-jquery.js" />
+    <Content Include="Resources\scripts\core\mousesroll.js" />
+    <Content Include="Resources\scripts\core\newform.js" />
+    <Content Include="Resources\scripts\core\required.js" />
+    <Content Include="Resources\scripts\core\text.js" />
+    <Content Include="Resources\scripts\supernova.js" />
+    <Content Include="Resources\scripts\validators\russians\dates.js" />
+    <Content Include="Resources\scripts\validators\validate.date.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Resources\css\components\dictionary.zip" />
+    <Content Include="Resources\css\components\modal.zip" />
+    <Content Include="Resources\css\components\slider.rar" />
+    <Content Include="Resources\css\fonts\font-awesome-4.6.3.eot" />
+    <Content Include="Resources\css\fonts\font-awesome-4.6.3.ttf" />
+    <Content Include="Resources\css\fonts\font-awesome-4.6.3.woff" />
+    <Content Include="Resources\css\fonts\font-awesome-4.6.3.woff2" />
+    <Content Include="Resources\css\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Resources\css\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Resources\css\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Resources\fonts\font-awesome-4.6.3.eot" />
+    <Content Include="Resources\fonts\font-awesome-4.6.3.ttf" />
+    <Content Include="Resources\fonts\font-awesome-4.6.3.woff" />
+    <Content Include="Resources\fonts\font-awesome-4.6.3.woff2" />
+    <Content Include="Resources\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Resources\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Resources\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Resources\fonts\Play-Regular.ttf" />
+    <Content Include="Resources\scripts\components\dictionary.zip" />
+    <Content Include="Resources\scripts\components\fias.zip" />
+    <Content Include="Resources\scripts\components\loader.zip" />
+    <Content Include="Resources\scripts\components\modal.zip" />
+    <Content Include="Resources\scripts\components\slider.zip" />
+    <Content Include="Resources\scripts\core\mask.jquery" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\Site.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\User\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bcs_App.Domain.Core\Bcs_App.Domain.Core.csproj">
+      <Project>{71a5a94f-3eb7-45e8-b436-5f134fffdbbb}</Project>
+      <Name>Bcs_App.Domain.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bcs_App.Domain.Interfaces\Bcs_App.Domain.Interfaces.csproj">
+      <Project>{f0410094-693c-47e8-af0b-954f1e98b520}</Project>
+      <Name>Bcs_App.Domain.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bcs_App.Infrastructure.Data\Bcs_App.Infrastructure.Data.csproj">
+      <Project>{041d7343-8106-43f0-8c01-18aa3b5ed272}</Project>
+      <Name>Bcs_App.Infrastructure.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55972</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:55972/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Данный проект ссылается на пакеты NuGet, отсутствующие на этом компьютере. Используйте восстановление пакетов NuGet, чтобы скачать их.  Дополнительную информацию см. по адресу: http://go.microsoft.com/fwlink/?LinkID=322105. Отсутствует следующий файл: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

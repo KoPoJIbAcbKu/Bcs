@@ -1,0 +1,26 @@
+﻿.vertical-scroll {
+    overflow-x: auto;
+    padding:0px;
+}
+
+    .vertical-scroll ul, .vertical-scroll ol {
+         list-style: none; 
+         white-space: nowrap;
+         margin:0;
+         display: table;
+         padding: 7px;
+    }
+
+    .vertical-scroll ul li, .vertical-scroll ol li {
+        display: inline;
+        white-space: nowrap;
+        zoom:1;
+    }
+
+    
+
+@media(min-width: 768px) {
+    .vertical-scroll {
+        overflow-x: hidden;
+    }
+}

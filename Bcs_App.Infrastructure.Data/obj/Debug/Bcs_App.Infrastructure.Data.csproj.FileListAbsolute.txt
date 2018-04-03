@@ -1,0 +1,11 @@
+F:\Projects\Bcs_App\Bcs_App.Infrastructure.Data\bin\Debug\Bcs_App.Infrastructure.Data.dll
+F:\Projects\Bcs_App\Bcs_App.Infrastructure.Data\bin\Debug\Bcs_App.Infrastructure.Data.pdb
+F:\Projects\Bcs_App\Bcs_App.Infrastructure.Data\bin\Debug\Bcs_App.Domain.Core.dll
+F:\Projects\Bcs_App\Bcs_App.Infrastructure.Data\bin\Debug\Bcs_App.Domain.Interfaces.dll
+F:\Projects\Bcs_App\Bcs_App.Infrastructure.Data\bin\Debug\Dapper.dll
+F:\Projects\Bcs_App\Bcs_App.Infrastructure.Data\bin\Debug\Bcs_App.Domain.Core.pdb
+F:\Projects\Bcs_App\Bcs_App.Infrastructure.Data\bin\Debug\Bcs_App.Domain.Interfaces.pdb
+F:\Projects\Bcs_App\Bcs_App.Infrastructure.Data\bin\Debug\Dapper.xml
+F:\Projects\Bcs_App\Bcs_App.Infrastructure.Data\obj\Debug\Bcs_App.Infrastructure.Data.csprojResolveAssemblyReference.cache
+F:\Projects\Bcs_App\Bcs_App.Infrastructure.Data\obj\Debug\Bcs_App.Infrastructure.Data.dll
+F:\Projects\Bcs_App\Bcs_App.Infrastructure.Data\obj\Debug\Bcs_App.Infrastructure.Data.pdb

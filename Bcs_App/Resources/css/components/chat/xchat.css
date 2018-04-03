@@ -1,0 +1,438 @@
+﻿body {
+}
+
+#login_form{
+    position:relative;
+    display:block;
+    background-color:#faefb0;
+    padding: 30px;
+    border-color:black;
+    border-radius:15px;
+    width:250px;
+}
+
+/* Chat window */
+#chat_area
+{    
+    width:240px;
+    display:none;
+    background-color: white;
+    padding-bottom: 5px;
+    border-style:solid;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    border-color: #C4C4C4;
+    border-width:1px;
+    z-index:100;
+    position:absolute;
+    bottom:0;
+    left:70%;
+    overflow-y:hidden;
+    overflow-x: hidden; 
+    text-align:center;
+}
+#chat-header{
+    
+    background: rgb(180,227,145); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(180,227,145,1) 0%, rgba(97,196,25,1) 50%, rgba(115,193,56,1) 97%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(180,227,145,1)), color-stop(50%,rgba(97,196,25,1)), color-stop(97%,rgba(115,193,56,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(180,227,145,1) 0%,rgba(97,196,25,1) 50%,rgba(115,193,56,1) 97%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(180,227,145,1) 0%,rgba(97,196,25,1) 50%,rgba(115,193,56,1) 97%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(180,227,145,1) 0%,rgba(97,196,25,1) 50%,rgba(115,193,56,1) 97%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(180,227,145,1) 0%,rgba(97,196,25,1) 50%,rgba(115,193,56,1) 97%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4e391', endColorstr='#73c138',GradientType=0 ); /* IE6-9 */
+
+
+    display:block;
+    padding-top:10px;
+    padding-bottom:6px;
+    color:white;
+    text-decoration:none;    
+    text-align:center;
+}
+#chat-header a{
+    color:white;
+    text-decoration:none;
+    font-family:Arial;
+}
+/* Dialog area (окно видимости, для скрола) */
+#chat_zone
+{ 
+    height: 240px;
+    width:100%;
+    overflow: auto; 
+    position:relative;
+    background-color: white;
+    margin-top:5px;
+    margin-bottom:10px;
+    text-align:left;    
+    border-top-style:solid;
+    border-top-width:1px;
+    border-top-color: #D6D5D5;
+}
+/* Вместилище месаг */
+#messages_form{        
+    height: 230px;
+    padding:0px 5px;
+    width:calc(100% - 10px);
+    margin:0px auto; padding:0px;          
+}
+/* Область сворачивания */
+#chat-container{
+    display:none;
+    background-color:white;
+}
+/* Входящее сообщение */
+.msg-left-block{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width:inherit;
+    display:block;
+    cursor:default;
+    width:100%;
+    overflow:auto;  
+    margin:5px;
+}
+/* Исходящее сообщение */
+.msg-right-block{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width:inherit;
+    display:block;
+    cursor:default;
+    width:100%;
+    overflow:auto;  
+    margin:5px;
+}
+.message_incoming{
+    border-radius:3px;
+    display:block;
+    background-color: #ABE24D;
+    width: calc(100% - 50px); 
+    font-size:12px;
+    font-family:'Segoe UI';
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    float:left;
+    padding:6px;
+    margin-bottom:4px;
+    -webkit-box-shadow: 2px 2px 4px 0px rgb(115, 115, 115);
+    -moz-box-shadow: 2px 2px 4px 0px rgb(115, 115, 115);
+    box-shadow: 2px 2px 4px 0px rgb(115, 115, 115);
+    word-wrap: break-word;
+}
+.message_outcoming{
+    border-radius:3px;
+    display:block;
+    background-color: #B2E4F4;
+    width: calc(100% - 50px); 
+    font-size:12px;    
+    font-family:'Segoe UI';
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    float:right;
+    padding:6px;
+    margin-bottom:4px;
+    -webkit-box-shadow: -2px 2px 4px 0px rgb(115, 115, 115);
+    -moz-box-shadow: -2px 2px 4px 0px rgb(115, 115, 115);
+    box-shadow: -2px 2px 4px 0px rgb(115, 115, 115);
+    word-wrap: break-word;
+}
+.arrow-r{
+    margin-top:4px;
+    width: 0;
+    height: 0;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-left: 6px solid;
+    border-left-color: #B2E4F4;  
+    border-right: 0;
+    float:right;
+}
+.arrow-l{
+    margin-top:4px;
+    width: 0;
+    height: 0;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-right: 6px solid;
+    border-right-color: #ABE24D;  
+    border-left: 0;
+    float:left;
+}
+/* блоки с временем */
+.timeblock-r{
+    padding-top:10px;
+    float:right;
+    width:30px;
+    font-size:10px;
+    font-family:Calibri;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.timeblock-l{   
+    padding-top:10px;
+    float:left;
+    width:30px;
+    font-size:10px;
+    font-family:Calibri;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.for_text input{
+    padding-left:5px;
+    width:220px;
+    height:24px;
+    border-width:1px;
+    border-radius:4px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white; 
+    color: #333; 
+    border: 1px solid #C9F3FF;     
+    line-height: 1; 
+    padding: 2px 4px;
+}
+.for_btn #send_message{
+    background: rgb(255,183,107); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(255,183,107,1) 0%, rgba(255,167,61,1) 50%, rgba(255,124,0,1) 87%, rgba(255,127,4,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,183,107,1)), color-stop(50%,rgba(255,167,61,1)), color-stop(87%,rgba(255,124,0,1)), color-stop(100%,rgba(255,127,4,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(255,183,107,1) 0%,rgba(255,167,61,1) 50%,rgba(255,124,0,1) 87%,rgba(255,127,4,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(255,183,107,1) 0%,rgba(255,167,61,1) 50%,rgba(255,124,0,1) 87%,rgba(255,127,4,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(255,183,107,1) 0%,rgba(255,167,61,1) 50%,rgba(255,124,0,1) 87%,rgba(255,127,4,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(255,183,107,1) 0%,rgba(255,167,61,1) 50%,rgba(255,124,0,1) 87%,rgba(255,127,4,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb76b', endColorstr='#ff7f04',GradientType=0 ); /* IE6-9 */
+    border-radius:4px;
+    border-width:0;    
+    width:80px;
+    height:24px;
+    color:white;
+    font-family:'Segoe UI';
+    font-weight:bold;
+}
+
+.for_btn input:hover{
+    -webkit-box-shadow : 0px 0px 7px rgba(0,0,0,1.0);
+	-moz-box-shadow : 0px 0px 7px rgba(0,0,0,1.0);
+	box-shadow : 0px 0px 7px rgba(0,0,0,1.0);
+}
+.b-popup{
+    width:100%;
+    min-height:100%;
+    background-color: rgba(0,0,0,0.5);
+    overflow:hidden;
+    position:fixed;
+    top:0px;
+    display: none;
+}
+.b-popup .b-popup-content{
+    margin:40px auto 0px auto;
+    width:200px;
+    height: 140px;
+    padding:10px;
+    background-color: #c5c5c5;
+    border-radius:5px;
+    box-shadow: 0px 0px 10px #000;
+}
+
+
+#auth-block
+{
+    padding-top:5px;
+    display:none;
+    width:240px;
+    height:280px;
+    position: relative;    
+    text-align:center;
+    background-color: rgb(245, 249, 252);
+}
+
+
+.textbox { 
+    border-radius:4px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white; 
+    color: #333; 
+    border: 1px solid #C9F3FF;     
+    line-height: 1; 
+    width: 210px; 
+    height:25px;
+    text-align:center;
+    padding: 2px 4px;
+} 
+
+.authorize-btn
+{
+    margin-top:15px;
+    width:200px;
+    height:46px;
+    color:white;
+    font-family:'Segoe UI';
+    font-size:16px;
+    border: 1px solid #FFCD01; 
+    background: rgb(255,183,107); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(255,183,107,1) 0%, rgba(255,167,61,1) 50%, rgba(255,124,0,1) 87%, rgba(255,127,4,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,183,107,1)), color-stop(50%,rgba(255,167,61,1)), color-stop(87%,rgba(255,124,0,1)), color-stop(100%,rgba(255,127,4,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(255,183,107,1) 0%,rgba(255,167,61,1) 50%,rgba(255,124,0,1) 87%,rgba(255,127,4,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(255,183,107,1) 0%,rgba(255,167,61,1) 50%,rgba(255,124,0,1) 87%,rgba(255,127,4,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(255,183,107,1) 0%,rgba(255,167,61,1) 50%,rgba(255,124,0,1) 87%,rgba(255,127,4,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(255,183,107,1) 0%,rgba(255,167,61,1) 50%,rgba(255,124,0,1) 87%,rgba(255,127,4,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb76b', endColorstr='#ff7f04',GradientType=0 ); /* IE6-9 */
+    border-radius:4px;
+}
+
+.authorize-btn:hover{
+    background: rgb(252,234,187); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(252,234,187,1) 0%, rgba(252,205,77,1) 50%, rgba(248,181,0,1) 89%, rgba(251,223,147,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(252,234,187,1)), color-stop(50%,rgba(252,205,77,1)), color-stop(89%,rgba(248,181,0,1)), color-stop(100%,rgba(251,223,147,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(252,234,187,1) 0%,rgba(252,205,77,1) 50%,rgba(248,181,0,1) 89%,rgba(251,223,147,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(252,234,187,1) 0%,rgba(252,205,77,1) 50%,rgba(248,181,0,1) 89%,rgba(251,223,147,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(252,234,187,1) 0%,rgba(252,205,77,1) 50%,rgba(248,181,0,1) 89%,rgba(251,223,147,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(252,234,187,1) 0%,rgba(252,205,77,1) 50%,rgba(248,181,0,1) 89%,rgba(251,223,147,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', endColorstr='#fbdf93',GradientType=0 ); /* IE6-9 */
+}
+
+#auth-block input:hover
+{
+
+}
+#auth-block input:focus
+{    
+    -webkit-box-shadow: 0px 0px 10px 2px rgba(137,245,115,1);
+    -moz-box-shadow: 0px 0px 10px 2px rgba(137,245,115,1);
+    box-shadow: 0px 0px 10px 2px rgba(137,245,115,1);
+    border-width:0px;
+}
+
+.auth-item-block{
+    display:block;
+    font-family:Arial;
+    color:#a9a9a9;
+    font-size:14px;
+}
+
+.auth-item-label{
+    display:block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:14px;
+    color:#a9a9a9;
+    margin-top:15px;
+    margin-bottom:6px;
+}
+
+#admins-list{
+    padding-top:5px;
+    display:inline;
+    background-color:white;
+    position: relative;  
+    width: 100%;
+    min-width: 240px;
+    height:305px;
+    text-align:center;
+}
+
+.admin-item{
+    border-radius:4px;
+    margin: 5px;
+    padding:10px 5px;
+    display:inline-table;    
+    border-color: #FCFBFB;
+    border-width: 1px;
+    height:50px;
+    width: calc(100% - 10px);
+    text-align:left;
+    overflow:visible;
+    -moz-box-shadow:0 0 11px #8f8f8f;
+    -webkit-box-shadow:0 0 11px #8f8f8f;
+    box-shadow:0 0 11px #8f8f8f;
+    
+}
+
+.bottom span {
+        display: block;
+    text-align: center;
+    font-size: 13px;
+    font-family: 'Segoe UI';
+    cursor: default;
+}
+
+.admin-item:hover{
+    background-color:rgb(252,234,187);
+}
+
+.admin-item .direction{
+    display:block;
+    text-align:center;
+    font-size:13px;
+    font-family:'Segoe UI';
+    cursor:default; 
+    margin-left:50px;
+}
+
+.admin-item .vh-name{
+    display:block;
+    color:orange;
+    font-family:'Segoe UI';
+    text-shadow: 0 1px 2px rgba(255, 171, 5, 0.49);
+    text-align: center;
+    cursor:default;
+}
+.avatar{
+    float:left;
+}
+
+#ChatPanel button {
+    display: block;
+    text-align: center;
+    font-size: 13px;
+    font-family: 'Segoe UI';
+}
+
+.no-border {
+    border-radius:0px !important;
+}
+
+    .no-border span {
+        cursor: pointer !important;
+        border-radius: 0px !important;
+    }
+    .no-border textarea {
+        border-radius: 0px !important;
+    }
+
+#chat {
+    min-width:280px;
+    color:black;
+}
+
+#mess_input {
+    resize: both;
+}
+
+.btn_send {
+    background: url("/img/btn_send.png") center center no-repeat;
+}

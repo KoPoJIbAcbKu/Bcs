@@ -1,0 +1,33 @@
+﻿.statusbar {
+    width: 100%;
+    height: 10px;
+    padding: 0px 10px;
+}
+
+    .statusbar a {
+        width: 10%;
+        height: 100%;
+        background: #cdcdcd;
+        border-left: 1px solid #ddd;
+        float: left;
+        display: inline-block;
+    }
+
+        .statusbar a.active {            
+            background: #7986cb;
+        }
+
+        .statusbar a.success {            
+            background: #4cae4c;
+        }        
+
+        .statusbar a:first-child {            
+            border-bottom-left-radius: 2px;
+            border-top-left-radius: 2px;
+            border-left:none;
+        }
+
+        .statusbar a:last-child {            
+            border-bottom-right-radius: 2px;
+            border-top-right-radius: 2px;
+        }

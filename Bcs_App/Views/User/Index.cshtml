@@ -1,0 +1,100 @@
+﻿@model Bcs_App.Domain.Core.User
+@{
+    ViewBag.Title = "bcs.app";
+    ViewBag.Hint = "bcs.app";
+}
+<script src="~/Resources/scripts/components/loader/css.loader.js"></script>
+<script src="~/Resources/scripts/core/text.js"></script>
+<script src="~/Resources/scripts/core/jquery.maskedinput.js"></script>
+
+@using (Html.BeginForm("Create", "User", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { id = "form", @class = "block-element small-container" }))
+{
+    @Html.AntiForgeryToken()
+    <div style="background: #40414a;border-radius:2px;">
+        <div class="block">
+            <h5 class="head-text">Данные о Пользователе</h5>
+
+            <div class="textbox-group">
+                @Html.LabelFor(model => model.Fio)
+                <div class="textbox-element">
+                    <div class="control-element">
+                        @Html.EditorFor(model => model.Fio, new { htmlAttributes = new { @class = "form-control", @data_format = "rus,spec", @data_format_registry = "first", @data_required = "", @data_toggle = "popover", @data_trigger = "focus", @data_placement = "bottom", @data_content = "Введите свою Фамилию, допускается ввод только на кириллице." } })
+                        <span class="error-block"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="textbox-group">
+                @Html.LabelFor(model => model.Phone)
+                <div class="textbox-element">
+                    <div class="control-element">
+                        @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control", @data_toggle = "popover", @data_trigger = "focus", @data_placement = "bottom", @data_content = "Введите номер телефона согласно формату.", @data_required="" } })
+                        <span class="error-block"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="textbox-group">
+                @Html.LabelFor(model => model.Email)
+                <div class="textbox-element">
+                    <div class="control-element">
+                        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", @data_required = "" } })
+                        <span class="error-block"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="textbox-group">
+                @Html.LabelFor(model => model.CityId)
+                <div class="textbox-element">
+                    <div class="control-element">
+                        @Html.DropDownListFor(model => model.CityId, new List<SelectListItem>() { new SelectListItem() { Text = "Москва", Value = "0" }, new SelectListItem() { Text = "Санкт-Петербург", Value = "1" }, new SelectListItem() { Text = "Новосибирск", Value = "2" }, new SelectListItem() { Text = "Сочи", Value = "3" } }, new { @class = "selectpicker", @data_provider = "" })
+                        <span class="error-block"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-text">
+                <button class="btn material-btn" type="submit" style="margin-right: 10px;margin: auto;">Сохранить</button>
+            </div>
+        </div>
+    </div>
+}
+
+<script>
+    $(document).ready(function () {
+        $('#Phone').mask("+7 (999) 999-99-99");
+        $('#form').submit(function () {
+            var serializedForm = $(this).serialize();
+            $(this).loader();
+            $.ajax({
+                url: $(this).attr('action'),
+                type: "POST",
+                data: serializedForm,
+                success: function (result) {
+                    if (result.state == "error") {
+                        for (var k in result.errors) {
+                            $(result.errors[k]).each(function (i, item) {
+                                $('#' + k).closest('.textbox-group').addClass('error');
+                                $('#' + k).closest('.textbox-group').find('.error-block').html(item.ErrorMessage);
+                            })
+                        }
+                    }
+                    else {
+                        var t = '<li class="list-group-item">{fio}<div class="text-material-submit">{phone}</div></li>';
+                        $('.left-menu .list-group').append(t
+                            .replace('{fio}', result.data.Fio)
+                            .replace('{phone}', result.data.Phone));                       
+                    }
+                    $('#form').loader();
+                },
+                error: function (result) {
+                    console.log(result);
+                    $(this).loader();
+                }
+            });
+
+            return false;
+        })
+    })
+</script>

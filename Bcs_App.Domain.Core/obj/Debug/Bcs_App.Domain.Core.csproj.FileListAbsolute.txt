@@ -1,0 +1,5 @@
+F:\Projects\Bcs_App\Bcs_App.Domain.Core\bin\Debug\Bcs_App.Domain.Core.dll
+F:\Projects\Bcs_App\Bcs_App.Domain.Core\bin\Debug\Bcs_App.Domain.Core.pdb
+F:\Projects\Bcs_App\Bcs_App.Domain.Core\obj\Debug\Bcs_App.Domain.Core.dll
+F:\Projects\Bcs_App\Bcs_App.Domain.Core\obj\Debug\Bcs_App.Domain.Core.pdb
+F:\Projects\Bcs_App\Bcs_App.Domain.Core\obj\Debug\Bcs_App.Domain.Core.csprojResolveAssemblyReference.cache

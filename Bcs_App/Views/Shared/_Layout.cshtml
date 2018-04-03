@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title – Bcs.app</title>
+    <link href="~/Resources/css/core/menu.css" rel="stylesheet" />
+    <script src="~/Resources/scripts/core/jquery-2.1.4.min.js"></script>
+    <script src="~/Resources/scripts/core/bootstrap.min.js"></script>
+    <link href="~/Resources/css/core/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Resources/css/core/colorictemplate.css" rel="stylesheet" />
+    <link href="~/Resources/css/components/select/bootstrap-select.min.css" rel="stylesheet" />
+    <script src="~/Resources/scripts/components/select/bootstrap-select.min.js"></script>
+    <link href="~/Resources/css/components/select/ajax-bootstrap-select.min.css" rel="stylesheet" />
+    <script src="~/Resources/scripts/components/select/ajax-bootstrap-select.min.js"></script>
+    <link href="~/Resources/css/core/form.css" rel="stylesheet" />
+    <script src="~/Resources/scripts/core/auth.js"></script>
+    <script src="~/Resources/scripts/core/newform.js"></script>
+    <script src="~/Resources/scripts/core/mask-jquery.js"></script>
+    <script src="~/Resources/scripts/core/jquery.event.swipe.js"></script>
+    <script src="~/Resources/scripts/components/tooltip/bootstrap-tooltip.js"></script>
+    <script src="~/Resources/scripts/components/statusbar/statusbar.js?ver=1"></script>
+    <script src="~/Resources/scripts/components/datepicker/bootstrap-datepicker.js"></script>
+    <script src="~/Resources/scripts/components/pagginator/pagginator.js"></script>
+    <script src="~/Resources/scripts/components/popover/poopover.js"></script>
+    <script src="~/Resources/scripts/components/scroll/jquery.nicescroll.min.js"></script>
+    <link href="~/Resources/css/core/Site.css" rel="stylesheet" />
+    <link href="~/Resources/css/core/Animation.css" rel="stylesheet" />
+    <link href="~/Resources/css/core/auth.css" rel="stylesheet" />
+    <link href="~/Resources/css/core/scroll.css" rel="stylesheet" />
+    <link href="~/Resources/css/components/chat/xchat.css" rel="stylesheet" />
+    <link href="~/Resources/css/components/datepicker/bootstrap-datepicker3.min.css" rel="stylesheet" />
+    <link href="~/Resources/css/components/statusbar/statusbar.css" rel="stylesheet" />
+    <link href="~/Resources/css/components/slider/slider.css" rel="stylesheet" />
+    <script src="~/Resources/scripts/components/slider/slider.js"></script>
+    <link href="~/Resources/css/components/modal/modal.css" rel="stylesheet" />
+    <script src="~/Resources/scripts/components/loader/css.loader.js"></script>
+    <script src="~/Resources/scripts/components/modal/modal.js"></script>
+    <script src="~/Resources/scripts/core/geolocation.js"></script>
+    <link href="~/Resources/css/components/scroll/vertical.scroll.css" rel="stylesheet" />
+    <link href="~/Resources/css/components/scroll/horizontal.scroll.css" rel="stylesheet" />
+    <script src="~/Resources/scripts/core/mousesroll.js"></script>
+    <script src="~/Resources/scripts/components/scroll/scroll.js"></script>
+    <link href="~/Resources/css/components/textbox/text.css?ver=2" rel="stylesheet" />
+    <link href="~/Resources/css/core/font-awesome.css" rel="stylesheet" />
+    <link href="~/Resources/css/core/font-play.css" rel="stylesheet" />
+</head>
+<body class='body-content @(Request.Cookies["style"] != null ? Request.Cookies["style"].Value : "light")'>
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header dropdown">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand" href="/">@ViewBag.Hint</a>
+            </div>
+            <div class="navbar-collapse collapse navbar-right">
+                <ul class="nav navbar-nav">
+                    <li style="padding: 4px;">
+                        <a href="#" class="animate" style="width: 42px;overflow: hidden;display: flex;"><span class="fa fa-sun-o"></span><span style="margin-left: 16px;" class="fa fa-moon-o"></span></a>
+                        <script>
+                                $(document).ready(function () {
+                                    $('.animate').click(function () {
+                                        if ($('body').hasClass('darkness')) {
+                                            $('body').removeClass('darkness');
+                                            setCookie('style', 'light', { express: 3600 * 24 * 365 });
+                                        }
+                                        else {
+                                            $('body').addClass('darkness');
+                                            setCookie('style', 'darkness', { express: 3600 * 24 * 365 });
+                                        }
+                                    })
+                                })
+                        </script>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="breadcrumb-container subscribe" vertical-scroll>
+        <div class="container filter">
+            <ol class="breadcrumb" style="margin-bottom:0px;">
+                <li class="breadcrumb-item active">Добавление пользователя</li>
+            </ol>
+        </div>
+    </div>
+    <style>
+        .body-content {
+            padding: 85px 0px 40px 0px;
+        }
+    </style>
+
+    @*<div class="body-content">
+        <div class="scroll-content main-block" style="padding:10px;">
+            <div style="width:100%; height:100%; overflow:auto; padding:0px;">
+                <div style="width:100%; height:100%; display:table;">
+                    <div style="width:100%; height:100%; display:table-cell; vertical-align:middle;">
+                        @RenderBody()
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>*@
+
+
+
+    <div class="scroll-content main-block">
+        <div class="left-menu">                
+            <div class="menu-block">
+                <div class="list-block list-block-filter">
+                    <div class="filter">
+                        <h6 class="head">Фильтр</h6>
+                        <div class="input-group input-group-sm" style="">
+                            <input type="text" class="form-control">
+                            <span class="input-group-btn remove">
+                                <span class="btn btn-material"><span class="glyphicon glyphicon-remove"></span></span>
+                            </span>
+                        </div>
+                    </div>
+                        
+                    <div class="scrolling-content">
+                        <ul class="list-group">
+                            @if (ViewBag.Users != null)
+                            {
+                                foreach (var user in (List<Bcs_App.Domain.Core.User>)ViewBag.Users)
+                                {
+                                    <li class="list-group-item">
+                                        @user.Fio
+                                        <div class="text-material-submit">@user.Phone</div>
+                                    </li>
+                                }
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </div>                   
+        </div>
+        <div class="menu-data-block">
+            <div style="width:100%; height:100%; overflow:auto; padding:0px;">
+                <div style="width:100%; height:100%; display:table;">
+                    <div style="width:100%; height:100%; display:table-cell; vertical-align:middle;">
+                        @RenderBody()
+                    </div>
+                </div>
+            </div>
+        </div>        
+
+        <style>
+            .scroll-content {
+                padding-top: 0;
+            }
+
+            .left-menu {
+                padding-left: 0px;
+            }
+        </style>
+
+    </div>
+
+    
+    <footer class="navbar navbar-inverse navbar-fixed-bottom footer-linq">
+        <div class="navbar-pluck">
+            <ul class="nav navbar-nav social">
+                <li class="version">
+                    <a href="/">
+                        Сборка @ViewContext.Controller.GetType().Assembly.GetName().Version.ToString(4)
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

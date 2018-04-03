@@ -1,0 +1,23 @@
+﻿.horizontal-scroll {
+    overflow: auto;
+}
+
+    .horizontal-scroll ul, .horizontal-scroll ol {
+         list-style: none; 
+         white-space: nowrap;
+         margin:0;
+         display: table;
+         padding: 7px;
+    }
+
+    .horizontal-scroll ul li, .horizontal-scroll ol li {
+        display: inline;
+        white-space: nowrap;
+        zoom:1;
+    }
+
+@media(min-width: 768px) {
+    .horizontal-scroll {
+        overflow: hidden;
+    }
+}

@@ -1,0 +1,59 @@
+﻿.radio-block {
+    width: 100%;
+    padding: 5px 0px;
+    display:inline-block;
+}
+
+.radio-element {
+    display: table;
+    margin-bottom: 5px;
+    color: #999999;
+    cursor: pointer;
+}
+
+    .radio-element .ico {
+        display: table-cell;
+        width: 25px;
+        vertical-align: middle;
+        font-size: 24px;
+    }
+
+    .radio-element .value {
+        border-bottom: 1px solid #E0E0E0;
+        background-color: transparent;
+        display: table-cell;
+        padding: 2px 0px;
+        line-height: 1.428571429;
+        vertical-align: middle;
+        font-size: 16px;
+    }
+
+    .radio-element.active .ico {
+        color: #7986cb !important;
+    }
+
+    .radio-element.active .value {
+        color: #7986cb !important;
+        border-color: #7986cb !important;
+    }
+
+    .radio-element:hover {        
+        color: #333;
+        border-color:#333;
+    }
+
+@media(min-width:768px) { 
+    .radio-element.col-sm-6:nth-child(2n) {
+        padding-left:10px;
+    }
+    
+    .radio-element.col-sm-6:nth-child(2n+1) {
+        padding-right:10px;
+    }
+}
+
+@media(max-width:767px) { 
+    .radio-element {
+        width:100%;
+    }
+}

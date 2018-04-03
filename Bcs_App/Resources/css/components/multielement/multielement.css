@@ -1,0 +1,28 @@
+﻿.multi-element {
+    padding: 10px;
+    width: 100%;
+    display: block;
+    border: 2px dotted #e6e6e6;
+    border-radius: 4px;
+    background: white;
+    font: 16px 'Segoe UI';
+    font-weight: 200;
+    text-align: center;
+    color: #748be0;
+    cursor:pointer;
+    transition-property: height;
+    transition-duration: 1.3s;
+}
+
+.multi-element-container {
+    width:100%;  
+    padding-top: 10px;
+}
+
+.multi-element:hover  {
+    background: #e6e6e6;
+}
+
+.multi-element:hover .multi-element-container {
+    display:block;
+}

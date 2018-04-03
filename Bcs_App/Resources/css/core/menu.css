@@ -1,0 +1,154 @@
+﻿
+
+.wmenu {
+    position: relative;
+    height: 100%;
+}
+
+.wmenu-left-50 {
+	padding-left: 50px;
+}
+.wmenu-left-100 {
+	padding-left: 100px;
+}
+.wmenu-left-150 {
+	padding-left: 150px;
+}
+.wmenu-left-200 {
+	padding-left: 200px;
+}
+.wmenu-left-250 {
+	padding-left: 250px;
+}
+.wmenu-left-300 {
+	padding-left: 300px;
+}
+.wmenu-left-350 {
+	padding-left: 350px;
+}
+.wmenu-left-400 {
+	padding-left: 400px;
+}
+.wmenu-left-450 {
+	padding-left: 450px;
+}
+.wmenu-left-500 {
+	padding-left: 500px;
+}
+.wmenu-right-50 {
+	padding-right: 50px;
+}
+.wmenu-right-100 {
+	padding-right: 100px;
+}
+.wmenu-right-150 {
+	padding-right: 150px;
+}
+.wmenu-right-200 {
+	padding-right: 200px;
+}
+.wmenu-right-250 {
+	padding-right: 250px;
+}
+.wmenu-right-300 {
+	padding-right: 300px;
+}
+.wmenu-right-350 {
+	padding-right: 350px;
+}
+.wmenu-right-400 {
+	padding-right: 400px;
+}
+.wmenu-right-450 {
+	padding-right: 450px;
+}
+.wmenu-right-500 {
+	padding-right: 500px;
+}
+
+.wmenu-left>.content-menu {
+    background: black;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width:100%;
+}
+
+.wmenu-right>.content-menu {
+    background: black;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width:100%;
+}
+
+.wmenu-left-50 >.content-menu{
+	width: 50px;
+}
+.wmenu-left-100>.content-menu {
+	width: 100px;
+}
+.wmenu-left-150>.content-menu {
+	width: 150px;
+}
+.wmenu-left-200>.content-menu {
+	width: 200px;
+}
+.wmenu-left-250>.content-menu {
+	width: 250px;
+}
+.wmenu-left-300>.content-menu {
+	width: 300px;
+}
+.wmenu-left-350>.content-menu {
+	width: 350px;
+}
+.wmenu-left-400>.content-menu {
+	width: 400px;
+}
+.wmenu-left-450>.content-menu {
+	width: 450px;
+}
+.wmenu-left-500>.content-menu {
+	width: 500px;
+}
+.wmenu-right-50>.content-menu {
+	width: 50px;
+}
+.wmenu-right-100>.content-menu {
+	width: 100px;
+}
+.wmenu-right-150>.content-menu {
+	width: 150px;
+}
+.wmenu-right-200>.content-menu {
+	width: 200px;
+}
+.wmenu-right-250>.content-menu {
+	width: 250px;
+}
+.wmenu-right-300>.content-menu {
+	width: 300px;
+}
+.wmenu-right-350>.content-menu {
+	width: 350px;
+}
+.wmenu-right-400>.content-menu {
+	width: 400px;
+}
+.wmenu-right-450>.content-menu {
+	width: 450px;
+}
+.wmenu-right-500>.content-menu {
+	width: 500px;
+}
+
+@media(max-width:1024px) {
+
+}
+
+@media(max-width:768px) {
+
+}

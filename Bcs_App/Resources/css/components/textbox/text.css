@@ -1,0 +1,158 @@
+﻿.textbox-group {
+    padding: 6px;
+    width: 100%;    
+    position: relative;
+    border-collapse: separate;
+}
+
+.left-block .button-group {
+    text-align:right;
+}
+
+    .textbox-group label {
+        /*white-space: nowrap;*/
+        vertical-align: middle;
+        border-radius: 2px;
+        font-size: 14px;
+        /*font-family: 'play';*/
+        padding: 0px 6px;
+        font-weight: 200;
+        line-height: 1;
+        /*text-align: center;*/
+        color: #5C6BC0;
+        display: block;
+        display:inline-block;
+        margin-bottom: 0px;
+        padding-bottom: 4px;
+    }
+
+.textbox-group.error {
+}
+
+    .textbox-group.error .textbox-element textarea,.textbox-group.error .textbox-element input,.textbox-group.error .textbox-element taginput,.textbox-group.error .textbox-element .span-text,.textbox-group.error .textbox-element select,.textbox-group.error .textbox-element button {
+        color: #EF5350;
+        border-color: #EF5350;
+    }
+
+.tques {
+    color: #748be0;
+    cursor: pointer;
+}
+
+.textbox-element {
+    padding: 0px 6px;
+    width: 100%;
+}
+
+    .textbox-element input, .textbox-element taginput, .textbox-element .span-text,.textbox-element select,.textbox-element button {
+        width: 100%;
+        /*height: 34px;*/
+        color: #333;
+        padding: 2px 0px;
+        line-height: 1.428571429;
+        vertical-align: middle;
+        /*user-select: none;*/
+        font-size: 16px;
+        /*font-family:'play';*/
+        font-weight: 300;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid #E0E0E0;
+        background-color: transparent;
+        box-shadow: none;
+        border-radius: 0px;
+        transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    }
+        
+            .textbox-element input:hover,.textbox-element select:hover {
+                border-color: #BDBDBD;
+            }
+            
+            .textbox-element input:focus,.textbox-element select:focus {
+                border-color: #7986CB;
+            }
+
+            .textbox-element input:focus:hover,.textbox-element select:focus:hover {
+                border-color: #7986CB;
+            }
+
+.head-text {
+    font-size: 18px ;
+    /*font-family:'play';*/
+    font-weight: 200;
+    text-align: center;
+}
+
+.sub-head-text {
+    font-size: 14px;
+    /*font-family:'play';*/
+    font-weight: 500;
+    text-align: left;
+    padding:0 12px;
+}
+
+/*.bootstrap-select.btn-group .dropdown-menu li a span.text {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}*/
+
+.bootstrap-select .dropdown-menu.open {
+    /*max-width: 100%;*/
+    max-height: 400px;
+}
+
+.textbox-element div.text-box {
+    width: 100%;
+    color: #333;
+    padding: 2px 0px;
+    line-height: 1.428571429;
+    vertical-align: middle;
+    font-size: 16px;
+    /*font-family:'play';*/
+    font-weight: 500;
+    border: none;
+    outline: none !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border-radius: 0px;
+}
+
+/*.hover-block {
+    background: #333;
+    cursor:pointer;
+}
+
+    .hover-block .textbox-group, .hover-block .textbox-group label {
+        cursor:pointer;
+    }
+
+    .hover-block .head-text, .hover-block .sub-head-text, .hover-block div.text-box {
+        color:white;
+    }*/
+
+textarea {
+    width:100% !important;
+    min-height: 100px;
+    border-color: rgb(224, 224, 224);
+    font-size: 16px;
+    /*font-family:'play';*/
+    font-weight: 500;
+}
+
+.textbox-element input:active, .textbox-element taginput:active, .textbox-element .span-text:active, .textbox-element select:active, textarea:active {
+    border-color:#7986cb;
+}
+
+.error-block {
+    display:none;
+    color: #EF5350;
+    width:100%;
+}
+
+.error .error-block {
+    display:block;
+}
+
+.description {
+    font-size: 14px;
+}

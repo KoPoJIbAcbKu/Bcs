@@ -1,0 +1,94 @@
+﻿
+
+.dictionary-open {
+    width: 400px;
+    height: 300px;
+    position: absolute;
+    z-index: 1000;
+    padding: 0px;
+}
+
+.dictionary-container {
+    padding: 0px;
+    width: 100%;
+    padding-top: 95px;
+    max-height: 100%;
+
+}
+
+.dictionary-head {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+}
+
+.dictionary-data {
+    background: #eee;
+    padding: 6px;
+    font-weight: 200;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+    .dictionary-container .list {
+        width: 100%;
+        overflow: auto;
+        /* display: none; */
+        /* border-top: 1px solid #ddd; */
+        padding: 8px 12px;
+        border-bottom-left-radius: 4px;
+        display:none;
+        border-bottom-right-radius: 4px;
+    }
+
+.dictionary-data-container {
+    height: 100%;
+    max-height: 170px;
+    width: 100%;
+    overflow: auto;
+}
+
+    .dictionary-data-container ul {
+        padding: 0;
+        margin: 0;
+    }
+
+.dictionary-container .list ul > li > a {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: block;
+    padding: 3px 5px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.428571429;
+    color: #333;
+    text-decoration: none;
+    font-size:14px;
+}
+
+.dictionary-container .list ul > li > a:hover {
+    background-color: #7986cb;
+    color:white;
+}
+.dictionary-container .list ul > li > a:active {
+    background-color: #7986cb;
+}
+.dictionary-container .list ul > li > a.select {
+    background-color: #7986cb;
+}
+
+.dictionary-container {
+    box-shadow:0 2px 20px 0 rgba(0, 0, 0, 0.4);
+}
+
+thead td .input-group .clear {
+    display:none;
+}
+
+thead td .input-group .form-control {
+    padding-right:0px !important;
+}

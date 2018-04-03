@@ -1,0 +1,96 @@
+﻿
+.infographic-block {
+    padding: 5px;
+    padding-left: 80px;
+    cursor:pointer;
+}
+
+.infographic {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    background: #7986CB;
+    /*color: #f6f6f7;
+    font-size: 28px;*/
+    width: 80px;
+    border-radius: 2px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+    .infographic .centralicon i {    
+        color: #f6f6f7;
+        font-size: 28px;
+    }
+
+.infographic-block:hover .infographic {
+    background: #5C6BC0;
+}
+
+.grayscale {
+    filter: grayscale(100%);
+}
+
+.centralicon {
+    display: table;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+    .centralicon > div {    
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+.voider {
+    font-size: 24px;
+    padding: 0px 6px;
+}
+
+.infographic-uncolor .infographic {
+    background: white;
+}
+
+.infographic-block.infographic-uncolor:hover .infographic {
+    background: white;
+}
+
+.infographic-alert .infographic {
+    background: #F44336;
+}
+
+.infographic-block.infographic-alert:hover .infographic {
+    background: #E53935;    
+}
+
+
+.infographic-submit .infographic {
+    background: #9575CD;
+}
+
+.infographic-block.infographic-submit:hover .infographic {
+    background: #7E57C2;    
+}
+
+
+.infographic-success .infographic {
+    background: #009688;
+}
+
+.infographic-block.infographic-success:hover .infographic {
+    background: #00796B;    
+}
+
+.infographic-success label {
+    color: #009688;
+}
+
+.infographic-submit label {
+    color: #9575CD;
+}
+
+.infographic-alert label {
+    color: #F44336;
+}
